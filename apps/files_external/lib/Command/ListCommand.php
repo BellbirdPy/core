@@ -116,7 +116,6 @@ class ListCommand extends Base {
 		$this->listMounts($userId, $mounts, $input, $output);
 	}
 
-
 	/**
 	 * @param $userId $userId
 	 * @param IStorageConfig[] $mounts
@@ -255,8 +254,8 @@ class ListCommand extends Base {
 			}
 			// This MUST stay the last entry
 			if ($shortView || $userId === self::ALL) {
-				// query the auth type 
-				if (\stristr($config->getBackend()->getText(), 'session') === TRUE) {
+				// query the auth type
+				if (\stristr($config->getBackend()->getText(), 'session') === true) {
 					$values[] =  'Session';
 				} else {
 					$values[] = 'User';
